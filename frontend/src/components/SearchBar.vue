@@ -1,17 +1,20 @@
 <script setup lang="ts">
     // Import necessary functions and types
-    import { ref, watch } from 'vue'
+    import { ref, watch, onMounted, onBeforeUnmount } from 'vue'
     import { useMoviesStore } from '../stores/movies'
     import { useDisplay } from 'vuetify'
 
     // Access the moviesStore for handling movie search
     const moviesStore = useMoviesStore()
 
+    // Access the useDisplay API for handling sizing behavior
+    const displayAPI = useDisplay()
+
     // Create reactive references for search inputs and breakpoint name
     const movieTitle = ref('')
     const movieDate = ref('')
     const movieVoteAverage = ref('')
-    const breakpointName = useDisplay().name.value
+    const breakpointName = ref(displayAPI.name.value)
 
     // Define props and emit events for communication with parent component
     export interface SearchBarProps {
@@ -57,10 +60,23 @@
     watch(movieVoteAverage, async (value) => {
         await moviesStore.setVoteAverage(parseInt(value))
     })
+
+    // Update breakpointName when the window size changes
+    const handleResize = () => {
+        breakpointName.value = displayAPI.name.value
+    }
+
+    onMounted(() => {
+        window.addEventListener('resize', handleResize)
+    })
+
+    onBeforeUnmount(() => {
+        window.removeEventListener('resize', handleResize)
+    })
 </script>
 
 <template>
-    <v-row :style="{ maxWidth: props.tab === 'list' ? (breakpointName === 'xs' ? '90%' : '70%') : '70%' }">
+    <v-row :style="{ maxWidth: props.tab === 'list' ? (breakpointName === 'xs' || breakpointName === 'sm'? '90%' : '70%') : '70%' }">
         <!-- Column for search movie text field -->
         <v-col :cols="props.tab === 'list' ? (breakpointName === 'xs' ? 6 : 10) : 10" :md="props.tab === 'list' ? 6 : 11">
             <v-text-field
