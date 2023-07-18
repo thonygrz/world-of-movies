@@ -96,7 +96,7 @@ Check out the [Postman API Documentation](https://documenter.getpostman.com/view
 
 Special thanks to [The Movie Database (TMDB)](https://www.themoviedb.org/documentation/api) for providing the API used in this project.
 
-## Authors
+## Author
 
 - [@thonygrz](https://www.github.com/thonygrz)
 
