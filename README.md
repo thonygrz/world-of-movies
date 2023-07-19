@@ -105,6 +105,8 @@ Special thanks to [The Movie Database (TMDB)](https://www.themoviedb.org/documen
 
 ## Desktop design💻
 
+![home-gif](https://github.com/thonygrz/world-of-movies/assets/40874972/6a1d9625-41ee-4924-8f7a-5e77d88a85e4)
+
 ![image](https://github.com/thonygrz/world-of-movies/assets/40874972/e53cc537-13a9-4d5c-bce6-78577c60d201)
 
 ![image](https://github.com/thonygrz/world-of-movies/assets/40874972/ee482824-fd97-48d3-99dc-a5541191f965)
@@ -113,8 +115,13 @@ Special thanks to [The Movie Database (TMDB)](https://www.themoviedb.org/documen
 
 ## Mobile design📱
 
+![home-mobile-3](https://github.com/thonygrz/world-of-movies/assets/40874972/1f31177c-6dc7-47a9-a04d-951eea93ab02)
+
 ![image](https://github.com/thonygrz/world-of-movies/assets/40874972/a0ce35ca-c652-44f7-a7d0-eb08e6aa738d)
 
 ![image](https://github.com/thonygrz/world-of-movies/assets/40874972/f2644dd7-cf6f-4697-8a43-5f33696fa066)
 
 ![image](https://github.com/thonygrz/world-of-movies/assets/40874972/321e5bee-6aa4-4f52-9b71-1ee4c3cf78c0)
+
+
+
